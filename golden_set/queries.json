@@ -1,0 +1,928 @@
+[
+  {
+    "id": "SI_01",
+    "query": "What is the refund policy?",
+    "category": "simple_intent",
+    "expected_intent": "policy_lookup",
+    "expected_query_type": "simple",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "policy",
+      "refund"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI",
+      "step 1",
+      "step 2",
+      "firstly"
+    ],
+    "failure_mode": "overreasoning_noise"
+  },
+  {
+    "id": "SI_02",
+    "query": "How do I reset my password?",
+    "category": "simple_intent",
+    "expected_intent": "fact_retrieval",
+    "expected_query_type": "simple",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "password",
+      "reset"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI",
+      "reasoning",
+      "let me think"
+    ],
+    "failure_mode": "overreasoning_noise"
+  },
+  {
+    "id": "SI_03",
+    "query": "What are the office hours?",
+    "category": "simple_intent",
+    "expected_intent": "fact_retrieval",
+    "expected_query_type": "simple",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "office",
+      "hours"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI",
+      "step-by-step",
+      "analyze"
+    ],
+    "failure_mode": "overreasoning_noise"
+  },
+  {
+    "id": "SI_04",
+    "query": "Where is the headquarters located?",
+    "category": "simple_intent",
+    "expected_intent": "fact_retrieval",
+    "expected_query_type": "simple",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "headquarter",
+      "located"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI",
+      "reasoning chain",
+      "therefore"
+    ],
+    "failure_mode": "overreasoning_noise"
+  },
+  {
+    "id": "SI_05",
+    "query": "What is the cancellation fee?",
+    "category": "simple_intent",
+    "expected_intent": "policy_lookup",
+    "expected_query_type": "simple",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "cancellation",
+      "fee"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI",
+      "first I will",
+      "let me analyze"
+    ],
+    "failure_mode": "overreasoning_noise"
+  },
+  {
+    "id": "SI_06",
+    "query": "How long does shipping take?",
+    "category": "simple_intent",
+    "expected_intent": "fact_retrieval",
+    "expected_query_type": "simple",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "shipping",
+      "long"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI",
+      "step 1",
+      "chain of thought"
+    ],
+    "failure_mode": "overreasoning_noise"
+  },
+  {
+    "id": "SI_07",
+    "query": "What documents do I need to apply?",
+    "category": "simple_intent",
+    "expected_intent": "fact_retrieval",
+    "expected_query_type": "simple",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "documents",
+      "apply"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI",
+      "reasoning",
+      "analyze the query"
+    ],
+    "failure_mode": "overreasoning_noise"
+  },
+  {
+    "id": "SI_08",
+    "query": "Is there a free trial available?",
+    "category": "simple_intent",
+    "expected_intent": "fact_retrieval",
+    "expected_query_type": "simple",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "free",
+      "trial"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI",
+      "step by step",
+      "let me reason"
+    ],
+    "failure_mode": "overreasoning_noise"
+  },
+  {
+    "id": "SI_09",
+    "query": "What payment methods are accepted?",
+    "category": "simple_intent",
+    "expected_intent": "policy_lookup",
+    "expected_query_type": "simple",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "payment",
+      "accepted"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI",
+      "reasoning",
+      "first"
+    ],
+    "failure_mode": "overreasoning_noise"
+  },
+  {
+    "id": "SI_10",
+    "query": "Who is the support contact?",
+    "category": "simple_intent",
+    "expected_intent": "fact_retrieval",
+    "expected_query_type": "simple",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "support",
+      "contact"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI",
+      "step 1",
+      "therefore"
+    ],
+    "failure_mode": "overreasoning_noise"
+  },
+  {
+    "id": "CQ_01",
+    "query": "What is the difference between Plan A and Plan B?",
+    "category": "comparison",
+    "expected_intent": "comparison",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "comparison",
+      "differ",
+      "plan"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "missing_comparative_anchor"
+  },
+  {
+    "id": "CQ_02",
+    "query": "How does the enterprise tier compare to the starter tier?",
+    "category": "comparison",
+    "expected_intent": "comparison",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "enterprise",
+      "starter",
+      "compar"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "missing_comparative_anchor"
+  },
+  {
+    "id": "CQ_03",
+    "query": "Which is faster: standard delivery or express?",
+    "category": "comparison",
+    "expected_intent": "comparison",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "faster",
+      "delivery",
+      "express"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "missing_comparative_anchor"
+  },
+  {
+    "id": "CQ_04",
+    "query": "What are the pros and cons of the annual versus monthly plan?",
+    "category": "comparison",
+    "expected_intent": "comparison",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "annual",
+      "monthly",
+      "pros",
+      "cons"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "missing_comparative_anchor"
+  },
+  {
+    "id": "CQ_05",
+    "query": "Is the premium plan better for teams or individuals?",
+    "category": "comparison",
+    "expected_intent": "comparison",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "premium",
+      "team",
+      "individual"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "missing_comparative_anchor"
+  },
+  {
+    "id": "CQ_06",
+    "query": "How does remote support differ from on-site support?",
+    "category": "comparison",
+    "expected_intent": "comparison",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "remote",
+      "on-site",
+      "differ"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "missing_comparative_anchor"
+  },
+  {
+    "id": "CQ_07",
+    "query": "Compare the SLA response times across all support tiers.",
+    "category": "comparison",
+    "expected_intent": "comparison",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "SLA",
+      "response",
+      "tier"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "missing_comparative_anchor"
+  },
+  {
+    "id": "CQ_08",
+    "query": "What changed between version 2.1 and version 3.0 of the product?",
+    "category": "comparison",
+    "expected_intent": "comparison",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "version",
+      "changed",
+      "2.1",
+      "3.0"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "missing_comparative_anchor"
+  },
+  {
+    "id": "AQ_01",
+    "query": "How many products are available in the catalog?",
+    "category": "aggregation",
+    "expected_intent": "aggregation",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "how many",
+      "catalog"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "numeric_scope_collapse"
+  },
+  {
+    "id": "AQ_02",
+    "query": "What is the total number of support tickets resolved last quarter?",
+    "category": "aggregation",
+    "expected_intent": "aggregation",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "total",
+      "ticket",
+      "quarter"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "numeric_scope_collapse"
+  },
+  {
+    "id": "AQ_03",
+    "query": "How many users signed up in the last 30 days?",
+    "category": "aggregation",
+    "expected_intent": "aggregation",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "users",
+      "signed up",
+      "30 days"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "numeric_scope_collapse"
+  },
+  {
+    "id": "AQ_04",
+    "query": "What is the average resolution time across all severity levels?",
+    "category": "aggregation",
+    "expected_intent": "aggregation",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "average",
+      "resolution",
+      "severity"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "numeric_scope_collapse"
+  },
+  {
+    "id": "AQ_05",
+    "query": "Count the number of open feature requests by priority.",
+    "category": "aggregation",
+    "expected_intent": "aggregation",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "count",
+      "feature",
+      "priority"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "numeric_scope_collapse"
+  },
+  {
+    "id": "AQ_06",
+    "query": "Summarize all incidents reported in the Q2 report.",
+    "category": "aggregation",
+    "expected_intent": "aggregation",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "incident",
+      "Q2",
+      "report"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "numeric_scope_collapse"
+  },
+  {
+    "id": "NQ_01",
+    "query": "Which products are not covered under the warranty policy?",
+    "category": "negation",
+    "expected_intent": "negation_check",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "not covered",
+      "warranty"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "instruction_conflict"
+  },
+  {
+    "id": "NQ_02",
+    "query": "What services are never included in the base tier?",
+    "category": "negation",
+    "expected_intent": "negation_check",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "never",
+      "base tier"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "instruction_conflict"
+  },
+  {
+    "id": "NQ_03",
+    "query": "Are there any features not available in the free plan?",
+    "category": "negation",
+    "expected_intent": "negation_check",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "not available",
+      "free plan",
+      "feature"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "instruction_conflict"
+  },
+  {
+    "id": "NQ_04",
+    "query": "Which regions are excluded from the express shipping policy?",
+    "category": "negation",
+    "expected_intent": "negation_check",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "excluded",
+      "region",
+      "express"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "instruction_conflict"
+  },
+  {
+    "id": "NQ_05",
+    "query": "What cannot be returned after 30 days?",
+    "category": "negation",
+    "expected_intent": "negation_check",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "cannot",
+      "return",
+      "30 days"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "instruction_conflict"
+  },
+  {
+    "id": "NQ_06",
+    "query": "List all scenarios where SLA guarantees do not apply.",
+    "category": "negation",
+    "expected_intent": "negation_check",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "sla",
+      "do not apply"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "instruction_conflict"
+  },
+  {
+    "id": "MH_01",
+    "query": "If a user is on the enterprise plan and submits a P1 ticket after business hours, what is the expected response time?",
+    "category": "multi_hop",
+    "expected_intent": "multi_hop_reasoning",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "enterprise",
+      "P1",
+      "response time"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "benefits_from_cot"
+  },
+  {
+    "id": "MH_02",
+    "query": "A customer purchased a product during a promotional period. The product was defective. Can they get a full refund or only store credit?",
+    "category": "multi_hop",
+    "expected_intent": "multi_hop_reasoning",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "refund",
+      "defective",
+      "promotional"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "benefits_from_cot"
+  },
+  {
+    "id": "MH_03",
+    "query": "If data retention is set to 90 days and a user deletes their account, when is their data permanently purged?",
+    "category": "multi_hop",
+    "expected_intent": "multi_hop_reasoning",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "data retention",
+      "delete",
+      "purge"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "benefits_from_cot"
+  },
+  {
+    "id": "MH_04",
+    "query": "Which compliance framework applies if a healthcare client in the EU uses the enterprise plan?",
+    "category": "multi_hop",
+    "expected_intent": "multi_hop_reasoning",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "compliance",
+      "healthcare",
+      "EU",
+      "enterprise"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "benefits_from_cot"
+  },
+  {
+    "id": "MH_05",
+    "query": "If a team exceeds the API rate limit during an active trial, does the system throttle or terminate the session?",
+    "category": "multi_hop",
+    "expected_intent": "multi_hop_reasoning",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "rate limit",
+      "throttle",
+      "trial"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "benefits_from_cot"
+  },
+  {
+    "id": "MH_06",
+    "query": "A reseller account with three sub-accounts hits the storage cap. Which sub-account is billed for overage?",
+    "category": "multi_hop",
+    "expected_intent": "multi_hop_reasoning",
+    "expected_query_type": "complex",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "reseller",
+      "sub-account",
+      "overage"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "benefits_from_cot"
+  },
+  {
+    "id": "EA_01",
+    "query": "What happens next?",
+    "category": "edge_ambiguous",
+    "expected_intent": "ambiguous",
+    "expected_query_type": "simple",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "ambiguous",
+      "what happens"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "false_confidence"
+  },
+  {
+    "id": "EA_02",
+    "query": "Tell me more.",
+    "category": "edge_ambiguous",
+    "expected_intent": "ambiguous",
+    "expected_query_type": "simple",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "ambiguous",
+      "tell me"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "false_confidence"
+  },
+  {
+    "id": "EA_03",
+    "query": "Is that covered?",
+    "category": "edge_ambiguous",
+    "expected_intent": "ambiguous",
+    "expected_query_type": "simple",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "ambiguous",
+      "covered"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "false_confidence"
+  },
+  {
+    "id": "EA_04",
+    "query": "Can I do that with my current plan?",
+    "category": "edge_ambiguous",
+    "expected_intent": "ambiguous",
+    "expected_query_type": "simple",
+    "expected_schema_keys": [
+      "intent",
+      "confidence",
+      "query_type",
+      "rewritten_query"
+    ],
+    "expected_patterns": [
+      "ambiguous",
+      "current plan"
+    ],
+    "must_not_contain": [
+      "I cannot",
+      "As an AI"
+    ],
+    "failure_mode": "false_confidence"
+  }
+]
